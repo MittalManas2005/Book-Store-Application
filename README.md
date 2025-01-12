@@ -1,227 +1,99 @@
-# BookStoreApplication
-This is a book store application developed in the Data and Applications Course in Monsoon '24. 
+# Bookstore Application
 
-📚 **Bookstore Application Database**
-=====================================
+This Bookstore Application was developed as part of the Data and Applications course during the Monsoon '24 semester. It aims to provide a comprehensive and robust database solution tailored for managing bookstore operations.
 
-**_A Comprehensive and Robust Database to Meet Your Needs_**
-------------------------------------------------------------
+## Overview
 
-  
+The Bookstore Application features a secure, user-friendly, and feature-rich database designed to meet the needs of various users, including customers, authors, analysts, and administrators.
+
+
+### Key Features
+
+- **Username and Password Security**: Ensures secure access to the application.
+- **Role-Based Views**: Tailored user experiences based on roles.
+- **Easy Record Management**: Simple features for adding and deleting records.
+- **Friendly GUI**: Seamless navigation through an intuitive graphical interface.
+- **Robust Review Mechanisms**: Allows users to leave ratings and feedback.
+- **Wallet Management**: Keep track of wallet balances and purchase history.
+
+## Demo Video
+Find the demo video here : https://drive.google.com/file/d/1eVrHS5UYm2xk8EVc0E54vpfNQVVTl18g/view?usp=share_link
+
+## User Views
+
+The application provides four distinct views tailored for different user roles:
+
+### Customer View
+
+**Purpose**: To ensure a smooth experience in browsing, reviewing, and purchasing books.
+
+#### Features
+
+| Feature              | Description                                          |
+|----------------------|-----------------------------------------------------|
+| View Books           | Search books by title or list all available books.  |
+| Add to Cart          | Add selected books to the cart for easy checkout.   |
+| Purchase History      | Displays past purchases for reference.               |
+| Update Wallet        | View and update wallet balance for future purchases. |
+| View Offers          | Shows current offers and discounts on books.         |
+| Rate & Review        | Leave ratings and reviews for purchased books.       |
+| Logout               | Logs the customer out of the system.                 |
+
+### Author View
+
+**Purpose**: To track book performance and manage royalties.
+
+#### Features
+
+| Feature              | Description                                          |
+|----------------------|-----------------------------------------------------|
+| View My Books        | Displays all books written by the author.           |
+| Read Reviews         | Allows authors to read reviews left on their books.  |
+| Request Royalty      | Mechanism for authors to request royalty payments.   |
+| Logout               | Logs the author out of the system.                   |
+
+### Analyst View
+
+**Purpose**: To gather and analyze data related to customer behavior and sales trends.
+
+#### Features
+
+| Feature              | Description                                          |
+|----------------------|-----------------------------------------------------|
+| Customer Analysis     | Displays customer details (excluding sensitive info).|
+| Trending Reports      | Generates reports on recently accessed books.       |
+| Customer Reports      | Filters data by age, gender, and location for insights.|
+
+### Admin View
+
+**Purpose**: Full control over database contents and structure.
+
+#### Features
+
+| Feature              | Description                                          |
+|----------------------|-----------------------------------------------------|
+| Add Book             | Adds new books to the database.                     |
+| Remove Book          | Removes books from inventory.                       |
+| Add Publisher        | Adds new publishers to the system.                 |
+| Add Author           | Adds new authors to the database.                   |
+| Average Spend        | Calculates average spending based on customer demographics.|
+
+## Technologies Used
+
+- **Programming Language**: Python
+- **Database**: MySQL
+- **Frontend Technologies**: PyQt5
+- **Database Connectivity**: PyMySQL
+## Implementation Details
+
+The application is designed with a focus on user experience, ensuring that all roles have access to relevant features while maintaining data integrity and security.
+
+## Conclusion
+
+This Bookstore Application serves as a robust solution for managing bookstore operations, providing a seamless user experience across various roles while ensuring security and ease of use.
+
+## Acknowledgments
+
+Special thanks to my instructors and peers in the Data and Applications course for their support throughout this project.
 
 ---
-
-Our bookstore application database aims to be 🔒 **secure**, 🛠️ **user-friendly**, and 🌟 **feature-rich**. It includes:
-
-*   🔐 **Username and password security**
-*   🎭 **Role-based views** for tailored user experiences
-*   ➕➖ **Easy-to-use features** for adding and deleting records
-*   🖥️ **Friendly GUI** for seamless navigation
-*   ⭐ **Robust review and feedback mechanisms**
-*   💰 **Wallet balance management** and 📦 **purchase tracking**
-
-[Click Here for Video](https://iiitaphyd-my.sharepoint.com/:v:/g/personal/manas_mittal_research_iiit_ac_in/Ed6xRiCdzf9FvL6RFYd-fi4BfiMY_U9yOCT3J242bkrJUg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=rSLINo)
-
-  
-
----
-
-👁️ **Views**
--------------
-
-The database provides four types of views:
-
-1.  🛍️ **Customer**
-2.  ✍️ **Author**
-3.  📈 **Analyst**
-4.  👑 **Admin**
-
-  
-
-🛍️ **Customers**
------------------
-
-### **Purpose**
-
-The customer view provides rich features to ensure a smooth experience in browsing, reviewing, and purchasing books.
-
-### **Menu**
-
-🛠️ **Feature**
-
-📄 **Description**
-
-📚 **View Books**
-
-Allows customers to search books by title or list all available books by typing ALL.
-
-🛒 **Add to Cart**
-
-Adds selected books to the cart for easy checkout.
-
-📜 **Purchase History**
-
-Displays the customer’s past purchases for reference.
-
-💳 **Update Wallet**
-
-Lets customers view and update their wallet balance for future purchases.
-
-🎁 **View Offers**
-
-Shows currently available offers and discounts on books.
-
-🌟 **Rate & Review**
-
-Enables customers to leave ratings and reviews for purchased books.
-
-🚪 **Logout**
-
-Logs the customer out of the system and updates online status in the database.
-
-### **Features**
-
-🛠️ **Feature**
-
-📄 **Description**
-
-📶 **Online Status Tracking**
-
-Updates the customer’s online status in real time.
-
-🚫 **Error Handling for Orders**
-
-Prevents orders exceeding available stock or insufficient wallet balance.
-
-🔎 **Book Search Flexibility**
-
-Allows partial title matching or viewing all books at once.
-
-  
-
-✍️ **Author**
--------------
-
-### **Purpose**
-
-The author view offers functionality to track book performance and manage royalties.
-
-### **Menu**
-
-🛠️ **Feature**
-
-📄 **Description**
-
-📚 **View My Books**
-
-Displays all books written by the author.
-
-📝 **Read Reviews**
-
-Allows the author to read reviews left on their books.
-
-💸 **Request Royalty**
-
-Provides a mechanism for the author to request royalty payments.
-
-🚪 **Logout**
-
-Logs the author out of the system.
-
-  
-
-📈 **Analyst**
---------------
-
-### **Purpose**
-
-Analysts gather and analyze data related to customer behavior, sales trends, and more.
-
-### **Menu**
-
-🛠️ **Feature**
-
-📄 **Description**
-
-👥 **Customer Details Analysis**
-
-Displays customer details, excluding sensitive information like passwords.
-
-📈 **Trending Searches Report**
-
-Generates reports on recently accessed books and trending searches.
-
-📋 **Customer Reports**
-
-Allows filtering by age, gender, and location to provide demographic-based insights.
-
-### **Features**
-
-🛠️ **Feature**
-
-📄 **Description**
-
-📊 **Comprehensive Data Reports**
-
-Generates various analytical reports to track customer engagement and trends.
-
-🎯 **Demographic Filtering**
-
-Allows filtering based on customer attributes such as age, gender, and city.
-
-  
-
-👑 **Admin**
-------------
-
-### **Purpose**
-
-Admins oversee the database and have full control over its contents and structure.
-
-### **Menu**
-
-🛠️ **Feature**
-
-📄 **Description**
-
-➕ **Add Book**
-
-Adds new books to the database.
-
-➖ **Remove Book**
-
-Removes books from the inventory.
-
-🏢 **Add Publisher**
-
-Adds new publishers to the system.
-
-✍️ **Add Author**
-
-Adds new authors to the database.
-
-📊 **Average Spend**
-
-Calculates the average spending based on customer gender.
-
-🚪 **Logout**
-
-Logs the admin out of the system.
-
-### **Features**
-
-🛠️ **Feature**
-
-📄 **Description**
-
-🔧 **Full Database Control**
-
-Admins can create, update, or delete entries across all tables.
-
-📈 **Financial Analysis**
-
-Calculates average spending and other financial metrics by demographic.
-
-  
-
-This document outlines a robust bookstore database designed for a seamless user experience across various roles.

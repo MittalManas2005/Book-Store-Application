@@ -17,7 +17,7 @@ def connect_db():
     conn = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='adminuser',
+        password='put_your_password',
         database='BOOKSTORE'
     )
     return conn
